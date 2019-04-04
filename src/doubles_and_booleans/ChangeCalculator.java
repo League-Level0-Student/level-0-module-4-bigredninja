@@ -20,12 +20,19 @@ public class ChangeCalculator {
 		int nickles = Integer.parseInt(hobo);
 		// Ask the user how many dimes they have, and convert their answer
 		String hipi = JOptionPane.showInputDialog("How many dimes do you have?");
+		int dimes = Integer.parseInt(hipi);
 		// Ask the user how many quarters they have, and convert their answer
-
+	    String bozo = JOptionPane.showInputDialog("How many quarters do you have?");
+	    int quarters = Integer.parseInt(bozo);
+	    String copper = JOptionPane.showInputDialog("How many pennies do you have?");
+	    int pennies = Integer.parseInt(copper);
 		// Calculate how much money the user has and save it in a double variable 
-
+	    double multi = nickles*5 + dimes*10 + quarters*25 + pennies*1;
+	    multi = multi /100;
 		// Tell the user how much money they have
-
+	     JOptionPane.showMessageDialog(null, "your toltal is $ " + multi + " hurry before the grinch gets your money!!!");
+	     		
+	     		
 	}
 }
 
