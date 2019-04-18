@@ -20,7 +20,12 @@ public class HappyPet {
 					new String[] { "feed that" + pets[bozo], "give it water", "walk that " + pets[bozo] }, null);
 			System.out.println(task);
 			// 5. Use user input to call the appropriate method created in step 4.
-
+			if(task == 0) {
+				
+			}
+			elseif(task == 1){
+				
+			}
 			// 6. If you determine the happiness level is large enough, tell the
 			//    user that he loves his pet and use break; to exit for loop.
 	}
