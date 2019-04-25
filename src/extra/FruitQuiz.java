@@ -40,14 +40,14 @@ public class FruitQuiz extends KeyAdapter {
 			// 3. If they selected the right fruit, do steps 4 and 7
 			if(keyCode ==  c) {
 				correct(); 
-			}
+			
 				// 4. Call the correct() method
 				
 				// 7. Use the nextQuestion() method to go to question2
-			
-			
+				nextQuestion(question2);
+			}
 			// 8. else (if they touched something else)
-				
+			else
 				// 9. Call the incorrect() method
 		
 		}
