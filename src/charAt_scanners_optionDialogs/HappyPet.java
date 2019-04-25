@@ -12,22 +12,27 @@ public class HappyPet {
 		int bozo = JOptionPane.showOptionDialog(null,"What pet do you want to buy?","pet gift.com",0,JOptionPane.INFORMATION_MESSAGE, null,
 				pets = new String[] { "dog ","cat", "fish"}, null);
 		// 7. REPEAT steps 3 - 6 enough times to make your pet happy!
-		
+		while (happinessLevel < 50) {
 			// 3. Use showOptionDialog to ask the user what they want to do to make their pet happy
 			//    (eg: cuddle, food, water, take a walk, groom, clean up poop).
 			//    Make sure to customize the title and question too.
 			int task = JOptionPane.showOptionDialog(null, "what do you want to do, to make your pet happy", "happy pet.com", 0, JOptionPane.INFORMATION_MESSAGE, null,
-					new String[] { "feed that" + pets[bozo], "give it water", "walk that " + pets[bozo] }, null);
+					new String[] { "feed that" + pets[bozo], "give it water", "walk that "  + pets[bozo] }, null);
 			System.out.println(task);
 			// 5. Use user input to call the appropriate method created in step 4.
 			if(task == 0) {
-				
+				feed();
 			}
-			elseif(task == 1){
-				
+			else if(task == 1) {
+				giveitwater();
+			}
+			else if(task == 2) {
+				walk(); 
 			}
 			// 6. If you determine the happiness level is large enough, tell the
 			//    user that he loves his pet and use break; to exit for loop.
+	}		
+		JOptionPane.showMessageDialog(null, "your pet loves you");
 	}
 	
 
@@ -44,7 +49,7 @@ public class HappyPet {
 			happinessLevel +=10;
 		}
 		static void walk() {												
-			JOptionPane.showMessageDialog(null," full belly");	
+			JOptionPane.showMessageDialog(null,"time for a nap ");	
 			happinessLevel +=20;
 		}
 					
