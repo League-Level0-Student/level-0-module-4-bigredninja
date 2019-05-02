@@ -16,7 +16,10 @@ public class FruitQuiz extends KeyAdapter {
 	void makeQuestions() {
 		question1 = new JLabel("<html>Which is not a real fruit? <br> A: Dragon Fruit <br> B: Durian <br> C: Crazyberry</html>");
 		// 11. Make another question called "question2".  Use question1 above as a guide.
-	}
+		question2 = new JLabel("<html>Which is  a real fruit? <br> A: booberry <br> B: monkeyberry <br> C: Cranberry</html>");
+		question3 = new JLabel("<html>Which animal has 4 legs ? <br> A: monkey <br> B: eagle <br> C: butterfly </html>");
+		question4 = new JLabel("<html>Which is not a real superhereo? <br> A: spider-man <br> B: mr.duck <br> C: ironman</html>");
+	}	
 
 	@Override
 	public void keyPressed(KeyEvent arg0) {
@@ -47,7 +50,60 @@ public class FruitQuiz extends KeyAdapter {
 				nextQuestion(question2);
 			}
 			// 8. else (if they touched something else)
-			else
+			else {
+				incorrect();
+			}
+				// 9. Call the incorrect() method
+		
+		}
+		else if (question2.isShowing()) {
+			// 3. If they selected the right fruit, do steps 4 and 7
+			if(keyCode ==  c) {
+				correct(); 
+			
+				// 4. Call the correct() method
+				
+				// 7. Use the nextQuestion() method to go to question2
+				nextQuestion(question3);
+			}
+			// 8. else (if they touched something else)
+			else {
+				incorrect();
+			}
+				// 9. Call the incorrect() method
+		
+		}
+		else if (question3.isShowing()) {
+			// 3. If they selected the right fruit, do steps 4 and 7
+			if(keyCode ==  a) {
+				correct(); 
+			
+				// 4. Call the correct() method
+				
+				// 7. Use the nextQuestion() method to go to question2
+				nextQuestion(question4);
+			}
+			// 8. else (if they touched something else)
+			else {
+				incorrect();
+			}
+				// 9. Call the incorrect() method
+		
+		}
+		else if (question4.isShowing()) {
+			// 3. If they selected the right fruit, do steps 4 and 7
+			if(keyCode ==  b) {
+				correct(); 
+			
+				// 4. Call the correct() method
+				
+				// 7. Use the nextQuestion() method to go to question2
+				nextQuestion(question5);
+			}
+			// 8. else (if they touched something else)
+			else {
+				incorrect();
+			}
 				// 9. Call the incorrect() method
 		
 		}
@@ -66,7 +122,7 @@ public class FruitQuiz extends KeyAdapter {
 
 	private void incorrect() {
 		// 10. Find a sound for wrong answers and put it in the default package. Use the playSound method to play it.
-
+		playSound("wrong.wav");
 	}
 
 	private void nextQuestion(JLabel newQuestion) {
